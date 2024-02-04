@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <!-- Include any additional CSS or JS libraries for interactive charts if needed -->
+</head>
+<body>
+    <h1>Analysis Results</h1>
+    
+    <!-- Display the generated chart -->
+    <img src="data:image/png;base64,{{ chart_url }}" alt="Analysis Chart">
+
+    <!-- Display the recommendation -->
+    <h2>Recommendation:</h2>
+    <p>{{ recommendation }}</p>
+
+    <!-- Additional Plots and Graphs -->
+    <!-- Additional Plots and Graphs -->
+<h3>Additional Plots and Graphs</h3>
+
+<!-- Bus Stop Count vs. Population Density Scatter Plot -->
+<div>
+    <h4>Bus Stop Count vs. Population Density</h4>
+    <!-- Add your scatter plot here -->
+    <img src="data:image/png;base64,{{ scatter_plot }}" alt="Bus Stop Count vs. Population Density">
+</div>
+
+
+
+    <!-- Display a clear message based on the recommendation -->
+    <h3>Final Recommendation:</h3>
+    {% if recommendation == "Increase" %}
+        <p>Based on the analysis, it is recommended to <strong>increase</strong> the number of bus stops in this location.</p>
+    {% elif recommendation == "Reduce" %}
+        <p>Based on the analysis, it is recommended to <strong>reduce</strong> the number of bus stops in this location.</p>
+    {% else %}
+        <p>The number of bus stops in this location is deemed appropriate based on the analysis.</p>
+    {% endif %}
+
+    <!-- Feel free to add any additional content or graphs as needed -->
+
+    <p>Feel free to customize this template based on your requirements.</p>
+</body>
+</html>

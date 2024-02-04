@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Stop Analysis Results</title>
+</head>
+<body>
+    <h1>Bus Stop Analysis Results</h1>
+    
+    <p>Based on the analysis, the recommendation is to:</p>
+    <h2>{% if prediction == 'Reduce' %}Decrease{% elif prediction == 'Increase' %}Increase{% else %}No Change{% endif %} Bus Stops</h2>
+    
+    <p>Here is the distribution of labels in the dataset:</p>
+    <img src="data:image/png;base64,{{ chart_url }}" alt="Distribution of Labels">
+</body>
+</html>

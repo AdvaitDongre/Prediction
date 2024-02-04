@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Stops Prediction</title>
+</head>
+<body>
+    <h1>Bus Stops Prediction</h1>
+    
+    <!-- Add an Analysis button with onclick attribute -->
+    <button onclick="handleAnalysisButtonClick()">Analysis</button>
+
+    <!-- Add this JavaScript code to handle the Analysis button click -->
+    <script>
+        function handleAnalysisButtonClick() {
+            // Get the user's current location
+            navigator.geolocation.getCurrentPosition(
+                function (position) {
+                    // Redirect to the analysis_results page with latitude and longitude parameters
+                    window.location.href = `/analysis_results?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}`;
+                },
+                function (error) {
+                    console.error('Error getting geolocation:', error.message);
+                }
+            );
+        }
+    </script>
+</body>
+</html>
